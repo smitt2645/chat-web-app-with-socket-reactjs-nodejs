@@ -11,7 +11,7 @@ const ChatPage = () => {
 
   useEffect(() => {
     socket.on("receive-message", ({id,text}) => {
-        console.log(data.text)
+        console.log(id,text)
       setMessages((prevMessages) => [...prevMessages, { id: id, text: text, sender: id }]);
     });
 

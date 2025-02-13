@@ -30,6 +30,9 @@ const Header = () => {
           <NavLink className={classes.links} to={"/contact"}>
             Contact
           </NavLink>
+          <NavLink className={classes.links} to={"/chat"}>
+            Chat
+          </NavLink>
         </Box>
       </Toolbar>
     </AppBar>

@@ -6,6 +6,7 @@ import Contact from "./Pages/Contact";
 import Layout from "./Layout/Layout";
 import {io} from "socket.io-client"
 import { useEffect } from "react";
+import ChatPage from "./Pages/ChatPage";
 function App() {
   const socket = io('http://localhost:8000')
   useEffect(()=>{
@@ -38,6 +39,10 @@ function App() {
         {
           path: "/contact",
           element: <Contact />,
+        },
+        {
+          path: "/chat",
+          element: <ChatPage/>,
         },
       ],
     },

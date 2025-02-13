@@ -24,6 +24,14 @@ io.on('connection',(socket)=>{
 
     // it will fire to all with sender's id but not to sender who has fired !
     // socket.broadcast.emit('event2',`you recieved messege from ${socket.id} `)
+    socket.on("msg",(data)=>{
+        console.log("data==>>",data)
+        const obj = {
+            id:socket.id,
+            text:data
+        }
+        socket.broadcast.emit('receive-message',obj)
+    })
 
     // dissconnect socket !
     socket.on('disconnect',()=>{
